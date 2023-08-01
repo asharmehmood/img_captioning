@@ -18,8 +18,6 @@ loaded_model_f.to(device)
 loaded_model_g.to(device)
 
 def image_captioning(image_file,model):
-    # image_file = Image.open(img)
-
     if model==0:
         inputs = processor_f(images=image_file, padding="max_length", return_tensors="pt").to(device)
         pv = inputs.pixel_values
